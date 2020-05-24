@@ -1,0 +1,277 @@
+//
+//  Prefix.pch
+//  AWCoding
+//
+//  Created by 杨建祥 on 2018/2/27.
+//  Copyright © 2018年 艾维科思. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import <CoreData/CoreData.h>
+
+/**********************************************************************
+ Pod管理的第三方库
+ *********************************************************************/
+#import <Masonry/Masonry.h>
+#import <AFNetworking/AFNetworking.h>
+#import <AFNetworking/UIKit+AFNetworking.h>
+#import <MJRefresh/MJRefresh.h>
+#import <IQKeyboardManager/IQKeyboardManager.h>
+#import <SVProgressHUD/SVProgressHUD.h>
+#import <pop/POP.h>
+#import <MJExtension/MJExtension.h>
+#import <VBFPopFlatButton/VBFPopFlatButton.h>
+#import <VBFPopFlatButton/VBFDoubleSegment.h>
+#import <SDWebImage/SDImageCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import <DZNEmptyDataSet/UIScrollView+EmptyDataSet.h>
+#import <WebViewJavascriptBridge/WebViewJavascriptBridge.h>
+#import <LTNavigationBar/UINavigationBar+Awesome.h>
+#import <NYXImagesKit/NYXImagesKit.h>
+#import <BlocksKit/BlocksKit.h>
+#import <BlocksKit/BlocksKit+UIKit.h>
+#import <TMCache/TMCache.h>
+#import <CocoaSecurity/Base64.h>
+#import <CocoaSecurity/CocoaSecurity.h>
+#import <TTTAttributedLabel/TTTAttributedLabel.h>
+#import <FDFullscreenPopGesture/UINavigationController+FDFullscreenPopGesture.h>
+
+// #import <NJKWebViewProgress/NJKWebViewProgress.h>
+// #import <NJKWebViewProgress/NJKWebViewProgressView.h>
+
+//#ifdef JXEnableEnvHoc
+//#import <PgySDK/PgyManager.h>
+//#import <PgyUpdate/PgyUpdateManager.h>
+//#endif
+
+//#import <KissXML/KissXML.h>
+//#import <JSPatch/JPEngine.h>
+//#import <WXTabBarController/WXTabBarController.h>
+
+// #import <Realm/Realm.h>
+//#import <UMSocialCore/UMSocialCore.h>
+//#import <UMengUShare/UMSocialWechatHandler.h>
+//#import <UShareUI/UShareUI.h>
+//#import <UShareUI/UMSocialUIManager.h>
+//#import <UMengUShare/WXApi.h>
+//#import <UMengUShare/UMSocialQQHandler.h>
+//
+//#import <TTTAttributedLabel/TTTAttributedLabel.h>
+////#import <HMSegmentedControl/HMSegmentedControl.h>
+#import <MXParallaxHeader/MXScrollViewController.h>
+//#import <CXAlertView/CXAlertView.h>
+//#import <FLAnimatedImage/FLAnimatedImage.h>
+//#import <FLAnimatedImage/FLAnimatedImageView.h>
+//#import <iVersion/iVersion.h>
+//#import <SWTableViewCell/SWTableViewCell.h>
+//#import <MWPhotoBrowser/MWPhotoBrowser.h>
+//#import <HMSegmentedControl/HMSegmentedControl.h>
+//#import <ZXingObjC/ZXingObjC.h>
+
+//#import <STPopup/STPopup.h>
+//#import <JDStatusBarNotification/JDStatusBarNotification.h>
+//#import <iCarousel/iCarousel.h>
+//#import <SLExpandableTableView/SLExpandableTableView.h>
+//
+#import <ActionSheetPicker_3_0/ActionSheetPicker.h>
+//#import <JSQMessagesViewController/JSQMessagesViewController.h>
+//#import <JSQMessagesViewController/JSQMessages.h>
+//#import <CMPopTipView/CMPopTipView.h>
+//
+//#import <LBXScan/LBXScanNative.h>
+//#import <LBXScan/ZXingWrapper.h>
+//#import <LBXScan/LBXZBarWrapper.h>
+//#import <LBXScan/LBXScanView.h>
+//#import <LBXScan/LBXScanVideoZoomView.h>
+//
+//#import <KLCPopup/KLCPopup.h>
+////#import <KxMenu/KxMenu.h>
+//
+//#import <UMengUShare/WXApi.h>
+//
+//#import <SlackTextViewController/SLKTextViewController.h>
+//#import <MarqueeLabel/MarqueeLabel.h>
+//#import <CXAlertView/CXAlertView.h>
+//#import <HMSegmentedControl/HMSegmentedControl.h>
+//#import <ZXingObjC/ZXingObjC.h>
+//#import <PNChart/PNChart.h>
+
+//#import <UMengSocial/UMSocial.h>
+//#import <UMengSocial/UMSocialWechatHandler.h>
+//#import <UMengSocial/UMSocialQQHandler.h>
+//#import <UMengSocial/UMSocialSnsPlatformManager.h>
+//#import <UMengSocial/WXApi.h>
+//#import <UMengAnalytics/MobClick.h>
+//#import <TLYShyNavBar/TLYShyNavBarManager.h>
+//#import <MXSegmentedPager/MXSegmentedPager.h>
+//#import <CHTwitterCover/UIScrollView+TwitterCover.h>
+//#import <MWPhotoBrowser/MWPhotoBrowser.h>
+//#import <RATreeView/RATreeView.h>
+//#import <SLExpandableTableView/SLExpandableTableView.h>
+
+//#import <AMapFoundationKit/AMapFoundationKit.h>
+//#import <AMapLocationKit/AMapLocationKit.h>
+
+
+/**********************************************************************
+ 手动管理的源码库
+ *********************************************************************/
+//#import "UIScrollView+APParallaxHeader.h"
+//#import "LLTabBar.h"
+//#import "XLForm.h"
+//#import "HMSegmentedControl.h"
+//#import "KxMenu.h"
+//#import "UMessage.h"
+//#import <ImSDK/ImSDK.h>
+
+#import "SIAlertView.h"
+#import "JXObjc.h"
+
+
+/**********************************************************************
+ 重新定义
+ *********************************************************************/
+//#ifdef JXFont
+//#undef JXFont
+//#endif
+//#define JXFont(x) ([UIFont fontWithName:@"NotoSansHans-DemiLight" size:(x * JXInstance.fontFactor)])
+//
+//#ifdef JXFontBold
+//#undef JXFontBold
+//#endif
+//#define JXFontBold(x) ([UIFont fontWithName:@"NotoSansHans-Black" size:(x * JXInstance.fontFactor)])
+//
+//#ifdef kStringTokenInvalid
+//#undef kStringTokenInvalid
+//#endif
+//#define kStringTokenInvalid     (@"您的登录已经过期")
+
+
+/**********************************************************************
+ 通用组件
+ *********************************************************************/
+#import "Type.h"
+
+#import "User.h"
+#import "Misc.h"
+#import "SkinManager.h"
+#import "JXDialog+AWCoding.h"
+
+#import "ProjectViewModel.h"
+#import "TaskViewModel.h"
+#import "TweetViewModel.h"
+#import "MessageViewModel.h"
+#import "MineViewModel.h"
+#import "MainViewModel.h"
+
+#import "LoginViewModel.h"
+#import "LoginViewController.h"
+
+#import "AppDelegate.h"
+
+#import "HTTPSessionManager+Account.h"
+#import "HTTPSessionManager+Tweet.h"
+
+//#import "Const.h"
+//
+////#import "Util.h"
+//
+//
+//#import "SkinManager.h"
+//#import "ViewModelServicesImpl.h"
+//
+//#import "HomeViewModel.h"
+//#import "HomeViewController.h"
+//#import "MineViewModel.h"
+//#import "MineViewController.h"
+//#import "MainViewModel.h"
+//#import "MainViewController.h"
+//
+//#import "LoginViewModel.h"
+//
+//
+//#import "HTTPRequestParam.h"
+//#import "HTTPSessionManager.h"
+//#import "HTTPSessionManager+Account.h"
+
+
+//#import "SkinManager.h"
+//#import "LoginViewController.h"
+//
+//#import "AppDelegate.h"
+//#import "FuncViewController.h"
+//#import "OpenViewController.h"
+
+//#import "HTTPRequestParam.h"
+//#import "HTTPRequestClient.h"
+//#import "HTTPRequestClient+Account.h"
+//
+//#import "WebViewController.h"
+//#import "LoginViewController.h"
+//#import "SceneViewController.h"
+//#import "MineViewController.h"
+
+////#import "UIFont+AWRecommend.h"
+////#import "UIFont+AWRecommend.h"
+//#import "AWWebViewController.h"
+//#import "Addr.h"
+//#import "AddrCityViewController.h"
+//#import "AddrAddViewController.h"
+//
+//#import "AppDelegate.h"
+//
+//#import "Util.h"
+//
+//
+//#import "ScanResultThird1ViewController.h"
+//
+//#import "NetManager.h"
+//#import "LBXScan.h"
+//
+//#import "IMListener.h"
+//#import "RefreshGifHeader.h"
+//
+//#import "CategoryView.h"
+//
+//#import "WebInteraction.h"
+//#import "WebViewController.h"
+//
+//#import "HTTPRequestParam.h"
+//#import "HTTPRequestClient.h"
+//#import "HTTPRequestClient+Comp.h"
+//#import "HTTPRequestClient+Account.h"
+//#import "HTTPRequestClient+Nice.h"
+//#import "HTTPRequestClient+Shop.h"
+//
+//////#import "Config.h"
+////#import "Tool.h"
+////#import "Type.h"
+//////
+////
+////#import "HTTPResponse.h"
+////#import "Object.h"
+//
+//#import "ProgressViewController.h"
+//#import "LoginViewController.h"
+//#import "JXServerViewController.h"
+//
+//#import "RcmdViewController.h"
+//#import "CompViewController.h"
+//#import "MineViewController2.h"
+//#import "NiceViewController.h"
+//#import "MineViewController.h"
+
+extern User *gUser;
+extern Misc *gMisc;
+
+#endif
